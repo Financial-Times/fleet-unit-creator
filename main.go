@@ -42,10 +42,10 @@ func main() {
 		vars := make(map[string]interface{})
 		vars["version"] = srv.Version
 		serviceFile, _ := renderedServiceFile(serviceTemplate, vars)
-		fmt.Printf("Renderred Service File: \n[%s]\n-------\n", serviceFile)
+		fmt.Printf("Rendered Service File: \n[%s]\n-------\n", serviceFile)
 
 		uf, _ := unit.NewUnitFile(serviceFile)
-		fmt.Printf("Unit File: \n[%# v]\n------------------\n", pretty.Formatter(uf))
+		fmt.Printf("Unit File Options: \n[%# v]\n------------------\n", pretty.Formatter(uf.Options))
 	}
 }
 
