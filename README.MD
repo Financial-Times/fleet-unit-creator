@@ -14,6 +14,6 @@
 
 ```
 export ROOT_URI=https://raw.githubusercontent.com/Financial-Times/up-service-files/debug-services/
-export $FLEET_REVISION=master
-docker run --env="ROOT_URI=$ROOT_URI" --env="REVISION=$REVISION" imageName
+export FLEET_REVISION=master
+docker run --env="ROOT_URI=$ROOT_URI" --env="FLEET_REVISION=$FLEET_REVISION" imageName
 ```
